@@ -1,76 +1,120 @@
-import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { fragments } from "@/content/fragments";
 
-export default async function FragmentDetail({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export async function generateStaticParams() {
+  return fragments.map((fragment) => ({
+    slug: fragment.slug,
+  }));
+}
+
+export default async function FragmentDetailPage({ params }: PageProps) {
   const { slug } = await params;
 
-  const fragment = fragments.find((f) => f.slug === slug);
+  const sorted = [...fragments].sort((a, b) => a.order - b.order);
+  const currentIndex = sorted.findIndex((item) => item.slug === slug);
 
-  if (!fragment) return notFound();
+  if (currentIndex === -1) {
+    notFound();
+  }
 
-  const currentIndex = fragments.findIndex((f) => f.slug === slug);
-  const prev = fragments[currentIndex - 1];
-  const next = fragments[currentIndex + 1];
+  const fragment = sorted[currentIndex];
+  const previousFragment = currentIndex > 0 ? sorted[currentIndex - 1] : null;
+  const nextFragment =
+    currentIndex < sorted.length - 1 ? sorted[currentIndex + 1] : null;
 
   return (
-    <main className="min-h-screen bg-[#f3efe7] text-[#1a1a1a] px-6">
-      <div className="mx-auto max-w-[520px] py-44">
-        <div className="mb-24">
+    <main className="min-h-screen bg-[#f7f5f0] px-6 py-16 text-neutral-800 md:px-10">
+      <div className="mx-auto max-w-3xl">
+        <div className="mb-10">
           <Link
             href="/fragments"
-            className="font-ui text-[14px] tracking-[0.18em] opacity-60 transition hover:opacity-100"
+            className="text-[11px] uppercase tracking-[0.24em] text-neutral-500 transition hover:text-neutral-800"
           >
-            ← FRAGMENTS
+            Back to Fragments
           </Link>
         </div>
 
-        <div className="font-ja space-y-1 text-[18px] leading-[1.65] tracking-[0.02em] text-[#1a1a1a]">
-          {fragment.ja.map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}
-        </div>
+        <article>
+          <div className="mb-10 space-y-5">
+            <div className="space-y-1">
+              {fragment.ja.map((line, index) => (
+                <p
+                  key={index}
+                  className="text-[14px] leading-[1.6] tracking-[0.05em] text-neutral-700"
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
 
-        <div className="mt-6 font-en space-y-1.5 text-[16px] leading-[1.05] tracking-[0.05em] text-[#1a1a1a]/60">
-          {fragment.en.map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}
-        </div>
+            <div className="space-y-1 pt-1">
+              {fragment.en.map((line, index) => (
+                <p
+                  key={index}
+                  className="text-[13px] leading-[1.5] tracking-[0.06em] text-neutral-500"
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
+          </div>
 
-        <div className="mt-28 flex justify-between font-ui text-[14px] tracking-[0.15em] opacity-60">
-          {prev ? (
-            <Link
-              href={`/fragments/${prev.slug}`}
-              className="transition hover:opacity-80"
-            >
-              ← BEFORE
-            </Link>
-          ) : (
-            <span />
-          )}
+         <div className="relative aspect-[4/3] max-w-[360px] overflow-hidden bg-neutral-200">
+            <Image
+              src={fragment.image}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 900px"
+              priority
+            />
+          </div>
+        </article>
 
-          {next ? (
-            <Link
-              href={`/fragments/${next.slug}`}
-              className="transition hover:opacity-80"
-            >
-              AFTER →
-            </Link>
-          ) : (
-            <span />
-          )}
-        </div>
+        <nav className="mt-16 border-t border-neutral-300 pt-8">
+          <div className="flex items-start justify-between gap-8">
+            <div className="min-h-[48px] flex-1">
+              {previousFragment ? (
+                <Link
+                  href={`/fragments/${previousFragment.slug}`}
+                  className="group inline-block"
+                >
+                  <p className="mb-2 text-[10px] uppercase tracking-[0.22em] text-neutral-300 transition group-hover:text-neutral-700">
+                    Remain
+                  </p>
+                  <p className="text-[14px] leading-[1.6] tracking-[0.04em] text-neutral-500 transition group-hover:text-neutral-800">
+                    {previousFragment.preview}
+                  </p>
+                </Link>
+              ) : null}
+            </div>
+
+            <div className="min-h-[48px] flex-1 text-right">
+              {nextFragment ? (
+                <Link
+                  href={`/fragments/${nextFragment.slug}`}
+                  className="group inline-block"
+                >
+                  <p className="mb-2 text-[10px] uppercase tracking-[0.22em] text-neutral-300 transition group-hover:text-neutral-700">
+                    Toward
+                  </p>
+                  <p className="text-[14px] leading-[1.6] tracking-[0.04em] text-neutral-500 transition group-hover:text-neutral-800">
+                    {nextFragment.preview}
+                  </p>
+                </Link>
+              ) : null}
+            </div>
+          </div>
+        </nav>
       </div>
     </main>
   );
-}
-
-export async function generateStaticParams() {
-  return fragments.map((f) => ({
-    slug: f.slug,
-  }));
 }
