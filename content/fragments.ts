@@ -32,7 +32,7 @@ export const fragments = [
   {
     order: 3,
     slug: "rust-layer",
-    preview: "Rust forms in layers",
+    preview: "Rust layers",
     ja: [
       "鉄は風にさらされ",
       "浅い傷を重ね錆びていく",
@@ -62,7 +62,7 @@ export const fragments = [
   {
     order: 5,
     slug: "lingering-heat",
-    preview: "Only the lingering heat remains",
+    preview: "Lingering heat remains",
     ja: [
       "熱は冷えていく",
       "夜が続く",
@@ -92,7 +92,7 @@ export const fragments = [
   {
     order: 7,
     slug: "absence-room",
-    preview: "Only words stay in the room",
+    preview: "in the room",
     ja: [
       "声はもう聞こえない",
       "言葉だけが部屋に残る",
@@ -107,7 +107,7 @@ export const fragments = [
   {
     order: 8,
     slug: "peel-trace",
-    preview: "It begins as a faint trace",
+    preview: "peeling trace",
     ja: [
       "薄くはじまり",
       "剥がれながら落ちる",
@@ -122,7 +122,7 @@ export const fragments = [
   {
     order: 9,
     slug: "fence-resonance",
-    preview: "Beyond the fence, resonance carries through",
+    preview: "Beyond the fence",
     ja: [
       "フェンスの向こう側から",
       "一定のリズムで残響が届く",
@@ -152,7 +152,7 @@ export const fragments = [
   {
     order: 11,
     slug: "firework-silence",
-    preview: "A single light climbs the sky",
+    preview: "The Light climbs the sky",
     ja: [
       "一筋の光が空へ上がり",
       "大きな花が夜をひらく",
@@ -194,4 +194,19 @@ export const fragments = [
     ],
     image: "/images/fragments/sea.jpg",
   },
+  {
+  order: 14,
+  slug: "spring-leaves",
+  preview: "before the rain dries",
+  ja: [
+    "古着のワークシャツ",
+    "縫い目だけ春風が抜ける",
+    "雨上がりの初夏",
+  ],
+  en: [
+    "The seam lets something pass",
+    "Spring leaves before the rain dries",
+  ],
+  image: "/images/fragments/aftertherain.jpg"
+},
 ];
