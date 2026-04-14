@@ -10,11 +10,11 @@ export default function AboutPage() {
     <SimplePageLayout title="ABOUT">
       {/* 日本語 */}
       <p className={jpClass}>
-        内側へ向かうための、ひとつのプロジェクト。
+        断章、余白、痕跡、変化、境界。
       </p>
 
       <p className={jpClass}>
-        断章、余白、痕跡、そして境界。言い切られない曖昧を、そのまま置く。
+        言い切られない曖昧を置くプロジェクト。
       </p>
 
       <p className={jpClass}>
@@ -26,15 +26,15 @@ export default function AboutPage() {
       </p>
 
       <p className={jpClass}>
-        説明されないまま残るものに、ゆっくりと触れていくための場所。
+        残るものに、ゆっくりと触れていくための場所。
       </p>
 
       <p className={jpClass}>
-        それぞれは独立しているが、どこかでつながっている。
+        それぞれは独立し、それぞれはつながっている。
       </p>
 
       <p className={jpClass}>
-        温度や境界、残り続ける気配のようなものとして。
+        温度や気配は残り続ける。
       </p>
 
       <p className={`${jpClass} mt-6`}>
@@ -42,12 +42,12 @@ export default function AboutPage() {
       </p>
 
       <p className={jpClass}>
-        内側の残り火を刻み、誰かの心に灯していく。
+        残り火を刻み、誰かの心に灯していく。
       </p>
 
       <p className={jpClass}>——</p>
 
-      <p className={jpClass}>内側に答えがある。</p>
+      <p className={jpClass}>内側へ。</p>
 
       {/* 英語 */}
       <p className={`${enClass} mt-12`}>

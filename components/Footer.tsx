@@ -5,13 +5,11 @@ export default function Footer() {
     <footer className="mt-20 border-t border-[#161616]/10 px-6 py-10">
       <div className="mx-auto max-w-3xl text-center text-[12px] leading-6 tracking-[0.04em] text-[#161616]/55">
 
-        <div className="mb-3">
+        <div>
           © INWARD 2026
           <br />
           A work by Rogue Studio
-        </div>
-
-        <div>
+          <br />
           <Link
             href="/privacy"
             className="transition duration-500 hover:text-[#161616]/80"
