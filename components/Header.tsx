@@ -52,7 +52,7 @@ export default function Header() {
         <div className="flex justify-start md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[11px] uppercase tracking-[0.28em] text-[#161616]/55 transition duration-500 hover:text-[#161616]/85"
+            className="text-[14px] uppercase tracking-[0.28em] text-[#161616]/55 transition duration-500 hover:text-[#161616]/85"
           >
             INDEX
           </button>
