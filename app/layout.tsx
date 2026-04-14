@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "INWARD",
@@ -58,6 +59,22 @@ export default function RootLayout({
                 </li>
                 <li>
                   <Link
+                    href="/human"
+                    className="transition duration-500 hover:text-[#161616]/85"
+                  >
+                    Human
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/log"
+                    className="transition duration-500 hover:text-[#161616]/85"
+                  >
+                    Log
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/about"
                     className="transition duration-500 hover:text-[#161616]/85"
                   >
@@ -78,6 +95,7 @@ export default function RootLayout({
         </header>
 
         <main className="pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );
