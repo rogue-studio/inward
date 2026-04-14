@@ -38,9 +38,9 @@ export default function RootLayout({
     <html lang="ja">
       <body className="bg-[#f5f1ea] text-[#161616] antialiased">
         <header className="fixed top-0 left-0 z-50 w-full bg-[#f5f1ea]/90 backdrop-blur">
-          <div className="max-w-3xl px-6 py-6">
-            <nav>
-              <ul className="flex items-center justify-center gap-6 text-[12px] uppercase tracking-[0.28em] text-[#161616]/55">
+          <div className="mx-auto max-w-3xl px-4 py-5 sm:px-6 sm:py-6">
+            <nav className="overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <ul className="flex min-w-max items-center justify-start gap-4 px-2 text-[11px] uppercase tracking-[0.22em] text-[#161616]/55 sm:justify-center sm:gap-6 sm:px-0 sm:text-[12px] sm:tracking-[0.28em]">
                 <li>
                   <Link
                     href="/"
@@ -94,7 +94,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="pt-20">{children}</main>
+        <main className="pt-20 sm:pt-20">{children}</main>
         <Footer />
       </body>
     </html>
