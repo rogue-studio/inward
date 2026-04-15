@@ -11,6 +11,9 @@ export default function LogPage() {
       <h1 className="mb-12 text-[28px] font-normal uppercase tracking-[0.14em] text-[#161616]/88">
         LOG
       </h1>
+<p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
+        Unfinished records from inward.
+      </p>
 
     <div className="text-[15px] leading-[2.1] text-[#161616]/68">
   <p>#プロジェクト準備中 #本末転倒ルーティン</p>
