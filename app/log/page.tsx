@@ -12,9 +12,13 @@ export default function LogPage() {
         LOG
       </h1>
 
-      <div className="text-[15px] leading-[2.1] text-[#161616]/68">
-        under consideration
-      </div>
+    <div className="text-[15px] leading-[2.1] text-[#161616]/68">
+  <p>「プロジェクト準備中のルーティン」</p>
+  <p>時間の余白の尊さを綴りながら、現実は深夜作業。</p>
+  <p>朝方に繰り出す大欠伸は私の矛盾の集大成か。</p>
+  <p>でも、誰かに何かを届けたくて、言葉に悩む時間て。</p>
+  <p>本末転倒するくらいじゃないと面白くないなって確信がある。</p>
+</div>
     </main>
   );
 }
