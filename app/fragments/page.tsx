@@ -10,6 +10,9 @@ export default function FragmentsPage() {
         <h1 className="mb-20 text-[24px] tracking-[0.3em] opacity-70">
           FRAGMENTS
         </h1>
+<p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
+  Fragments shaped by silence, trace, and distance.
+</p>
 
         <ul className="space-y-2">
           {sorted.map((fragment) => (
