@@ -11,7 +11,7 @@ export default function Home() {
               fontFamily='Georgia, "Times New Roman", serif'
               fontSize="128"
             >
-              <text x="310" y="150">
+              <text x="305" y="140">
                 I
               </text>
               <text x="375" y="150">
