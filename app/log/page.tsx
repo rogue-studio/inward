@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function LogPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 pb-20 pt-28 text-[#161616]">
-      <h1 className="mb-12 text-[28px] font-normal uppercase tracking-[0.14em] text-[#161616]/88">
+      <h1 className="mb-4 text-[28px] font-normal uppercase tracking-[0.14em] text-[#161616]/88">
         LOG
       </h1>
 <p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
