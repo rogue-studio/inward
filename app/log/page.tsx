@@ -11,7 +11,7 @@ export default function LogPage() {
       <h1 className="mb-12 text-[28px] font-normal uppercase tracking-[0.14em] text-[#161616]/88">
         LOG
       </h1>
-
+<hr>
     <div className="text-[15px] leading-[2.1] text-[#161616]/68">
   <p>「プロジェクト準備中のルーティン」</p>
   <p>時間の余白の尊さを綴りながら、現実は深夜作業。</p>
@@ -19,6 +19,7 @@ export default function LogPage() {
   <p>でも、誰かに何かを届けたくて、言葉に悩む時間て。</p>
   <p>本末転倒するくらいじゃないと面白くないなって確信がある。</p>
 </div>
+<hr>
     </main>
   );
 }
