@@ -4,15 +4,15 @@ export default function ContactPage() {
   return (
     <SimplePageLayout title="CONTACT">
       <p className="text-[14px] leading-[1.6] tracking-[0.05em] font-light opacity-70">
-        感想を話すこと。
+        ご感想でも、ご意見でも、ご相談でも。
       </p>
 
       <p className="text-[14px] leading-[1.6] tracking-[0.05em] font-light opacity-70">
-        リクエストをすること。
+        お仕事の依頼でも、プロジェクトへの合流希望でも。
       </p>
 
       <p className="text-[14px] leading-[1.6] tracking-[0.05em] font-light opacity-70">
-        出会うこと、繋がること。
+        あなたのメッセージを楽しみにしています。
       </p>
 
       <p className="mt-6 text-[14px] leading-[1.6] tracking-[0.05em] font-light opacity-70">
