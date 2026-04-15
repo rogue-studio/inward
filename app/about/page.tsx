@@ -8,7 +8,7 @@ const enClass =
 export default function AboutPage() {
   return (
     <SimplePageLayout title="ABOUT">
-<p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
+<p className="mb-4 text-[13px] tracking-[0.06em] text-[#161616]/52">
   An editorial project shaped by fragments, silence, and trace.
 </p>
       {/* 日本語 */}
