@@ -14,19 +14,19 @@ export default function Home() {
               <text x="305" y="140">
                 I
               </text>
-              <text x="375" y="150">
+              <text x="370" y="140">
                 N
               </text>
-              <text x="495" y="150">
+              <text x="490" y="140">
                 W
               </text>
-              <text x="625" y="150">
+              <text x="620" y="140">
                 A
               </text>
-              <text x="730" y="150">
+              <text x="725" y="140">
                 R
               </text>
-              <text x="840" y="150">
+              <text x="835" y="140">
                 D
               </text>
             </g>
