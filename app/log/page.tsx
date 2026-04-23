@@ -20,9 +20,9 @@ export default function LogPage() {
 
         {/* LOG 1 */}
         <div className="pb-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">本末転倒 — process</p>
-          <p className="mt-4">余白の尊さを編集するのは詰め詰めの深夜</p>
-          <p>矛盾と皮肉にどっぷり浸かってグンモーニン</p>
+          <p className="text-[#161616]/68"> — process</p>
+          <p className="mt-4">余白の尊さを編集する詰め詰めの深夜</p>
+          <p>矛盾と皮肉にどっぷり浸かる朝5時のブラック</p>
         </div>
 
         {/* LOG 2 */}
@@ -30,16 +30,16 @@ export default function LogPage() {
           <p className="text-[#161616]/68">
             信頼 — voices / 30s / female
           </p>
-          <p className="mt-4">もう少し読者を信じていい気がしました──</p>
+          <p className="mt-4">もう少し読者を信じていい気がしました</p>
         </div>
 
         {/* LOG 3 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">
-            ギミック — voices / 30s / male
+            ギミック — voices / 50s / male
           </p>
           <p className="mt-4">
-            比喩排除の観察的断片が読者視点で比喩になる仕掛けは悪くない──
+            比喩排除の観察的断片が読者視点で比喩になる仕掛けはクールだね
           </p>
         </div>
 
