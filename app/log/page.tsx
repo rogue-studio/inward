@@ -20,8 +20,8 @@ export default function LogPage() {
 
         {/* LOG 1 */}
         <div className="pb-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68"> — process</p>
-          <p className="mt-4">余白の尊さを編集する詰め詰めの深夜</p>
+          <p className="text-[#161616]/68">朝は来る — process</p>
+          <p className="mt-4">余白の尊さを編集する深夜の詰め詰めスケジュール</p>
           <p>矛盾と皮肉にどっぷり浸かる朝5時のブラック</p>
         </div>
 
@@ -39,23 +39,29 @@ export default function LogPage() {
             ギミック — voices / 50s / male
           </p>
           <p className="mt-4">
-            比喩排除の観察的断片が読者視点で比喩になる仕掛けはクールだね
+            比喩排除の観察的断片が読者視点で比喩になる仕掛け自体はクールだね
           </p>
         </div>
 
         {/* LOG 4 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">境界線上 — process</p>
-          <p className="mt-4">良いと良くないの境界線を引く</p>
-          <p>境界線上あるいはその近くにあるflagmentsが最適解</p>
+          <p className="text-[#161616]/68">選定 — process</p>
+          <p className="mt-4">良いと良くないの間に境界線を引く</p>
+          <p>境界線上あるいはその近くにあるflagmentsがクリティカル</p>
         </div>
 
-        {/* LOG 5（最後は線なし） */}
-        <div className="pt-10">
-          <p className="text-[#161616]/68">破天荒 — diary</p>
-          <p className="mt-4">日曜日の朝、ラーメンとパスタとざる蕎麦を食べた</p>
+        {/* LOG 5 */}
+         <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">破天荒メンズ — diary</p>
+          <p className="mt-4">日曜日の朝、ラーメンとパスタとざる蕎麦をシバく</p>
           <p>いずれもセブンイレブンで購入</p>
           <p>常識をぶっ飛ばして清々しい</p>
+        </div>
+
+        {/* LOG 6 */}
+         <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">アンバランス — voices / 40s / male</p>
+          <p className="mt-4">コンセプトも体験もおもしろかったけどリズムの崩壊は欲しちゃったなあ</p>
         </div>
 
       </div>
