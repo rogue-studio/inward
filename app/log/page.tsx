@@ -20,34 +20,45 @@ export default function LogPage() {
 
         {/* LOG 1 */}
         <div className="pb-10 border-b border-neutral-200">
-          <p>#制作ログ #本末転倒</p>
-          <p>余白の尊さを編集するのは詰め詰めの深夜</p>
+          <p className="text-[12px] tracking-[0.08em] text-[#161616]/40">— process</p>
+          <p className="mt-2 text-[#161616]/56">本末転倒</p>
+          <p className="mt-4">余白の尊さを編集するのは詰め詰めの深夜</p>
           <p>矛盾と皮肉にどっぷり浸かってグンモーニン</p>
         </div>
 
         {/* LOG 2 */}
         <div className="py-10 border-b border-neutral-200">
-          <p>#ご感想ログ #信頼</p>
-          <p>もう少し読者を信じていい気がしました──</p>
+          <p className="text-[12px] tracking-[0.08em] text-[#161616]/40">
+            — voices / 30s / female
+          </p>
+          <p className="mt-2 text-[#161616]/56">信頼</p>
+          <p className="mt-4">もう少し読者を信じていい気がしました──</p>
         </div>
 
         {/* LOG 3 */}
         <div className="py-10 border-b border-neutral-200">
-          <p>#ご感想ログ #ギミック</p>
-          <p>比喩排除の観察的断片が読者視点で比喩になる仕掛けは悪くない──</p>
+          <p className="text-[12px] tracking-[0.08em] text-[#161616]/40">
+            — voices / 30s / male
+          </p>
+          <p className="mt-2 text-[#161616]/56">ギミック</p>
+          <p className="mt-4">
+            比喩排除の観察的断片が読者視点で比喩になる仕掛けは悪くない──
+          </p>
         </div>
 
         {/* LOG 4 */}
         <div className="py-10 border-b border-neutral-200">
-          <p>#制作ログ #境界線上</p>
-          <p>良いと良くないの境界線を引く</p>
+          <p className="text-[12px] tracking-[0.08em] text-[#161616]/40">— process</p>
+          <p className="mt-2 text-[#161616]/56">境界線上</p>
+          <p className="mt-4">良いと良くないの境界線を引く</p>
           <p>境界線上あるいはその近くにあるflagmentsが最適解</p>
         </div>
 
         {/* LOG 5（最後は線なし） */}
         <div className="pt-10">
-          <p>#日記ログ #破天荒</p>
-          <p>日曜日の朝、ラーメンとパスタとざる蕎麦を食べた</p>
+          <p className="text-[12px] tracking-[0.08em] text-[#161616]/40">— diary</p>
+          <p className="mt-2 text-[#161616]/56">破天荒</p>
+          <p className="mt-4">日曜日の朝、ラーメンとパスタとざる蕎麦を食べた</p>
           <p>いずれもセブンイレブンで購入</p>
           <p>常識をぶっ飛ばして清々しい</p>
         </div>
