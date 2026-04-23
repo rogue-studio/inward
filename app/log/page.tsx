@@ -28,13 +28,13 @@ export default function LogPage() {
         {/* LOG 2 */}
         <div className="py-10 border-b border-neutral-200">
           <p>#ご感想ログ #信頼</p>
-          <p>「もう少し読者を信じていい気がしました」</p>
+          <p>──もう少し読者を信じていい気がしました</p>
         </div>
 
         {/* LOG 3 */}
         <div className="py-10 border-b border-neutral-200">
           <p>#ご感想ログ #ギミック</p>
-          <p>「比喩排除の観察的断片が読者視点で比喩になる仕掛けは悪くない」</p>
+          <p>──比喩排除の観察的断片が読者視点で比喩になる仕掛けは悪くない</p>
         </div>
 
         {/* LOG 4 */}
