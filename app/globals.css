@@ -46,3 +46,18 @@ body {
 .font-en {
   font-family: var(--font-playfair), serif;
 }
+
+@keyframes inward-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inward-fade {
+  animation: inward-fade 900ms ease-out both;
+}

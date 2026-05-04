@@ -22,36 +22,35 @@ export default function LogPage() {
         <div className="pb-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">朝は来る — process</p>
           <p className="mt-4">余白の尊さを編集する深夜の詰め詰めスケジュール</p>
-          <p>矛盾と皮肉にどっぷり浸かる朝5時のブラック</p>
+          <p>矛盾と皮肉にどっぷり浸かる朝5時に濃いブラック</p>
+          <p>泥水みたいなコーヒー味だ</p>
         </div>
 
         {/* LOG 2 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">
-            信頼 — voices / 30s / female
-          </p>
-          <p className="mt-4">もう少し読者を信じていい気がしました</p>
+          <p className="text-[#161616]/68">信じること — process</p>
+          <p className="mt-4">プロジェクト立ち上げ初期のできごと</p>
+          <p>fragmentsをプリントして見てもらった</p>
+          <p>「もう少し読者を信じてもいい気がしました」と言われた</p>
         </div>
 
         {/* LOG 3 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">
-            ギミック — voices / 50s / male
-          </p>
-          <p className="mt-4">
-            比喩排除の観察的断片が読者視点で比喩になる仕掛け自体はクールだね
-          </p>
+          <p className="text-[#161616]/68">ギミック — process</p>
+          <p className="mt-4">比喩を排除する観察的断片</p>
+          <p>読者視点で比喩になるギミック</p>
+          <p>仕掛けはまったくそれだけじゃない（自信）</p>
         </div>
 
         {/* LOG 4 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">選定 — process</p>
           <p className="mt-4">良いと良くないの間に境界線を引く</p>
-          <p>境界線上あるいはその近くにあるflagmentsがクリティカル</p>
+          <p>境界線上あるいはその近くにあるfragmentsが総じてクリティカルだった</p>
         </div>
 
         {/* LOG 5 */}
-         <div className="py-10 border-b border-neutral-200">
+        <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">破天荒メンズ — diary</p>
           <p className="mt-4">日曜日の朝、ラーメンとパスタとざる蕎麦をシバく</p>
           <p>いずれもセブンイレブンで購入</p>
@@ -59,9 +58,19 @@ export default function LogPage() {
         </div>
 
         {/* LOG 6 */}
-         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">アンバランス — voices / 40s / male</p>
-          <p className="mt-4">コンセプトも体験もおもしろかったけどリズムの崩壊は欲しちゃったなあ</p>
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">写真の難しさよりも — process</p>
+          <p className="mt-4">思想を共有できるカメラマン急募だな</p>
+          <p>写真が難しいのはさることながら</p>
+          <p>視覚的に別解釈もパッケージしたい</p>
+        </div>
+
+        {/* LOG 7 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">季節の変わりめ — diary</p>
+          <p className="mt-4">寒いのか暑いのかよくわからない</p>
+          <p>セーターと短パンで過ごす羽目になった</p>
+          <p>今はめちゃめちゃ暑いからアイス食べてる</p>
         </div>
 
       </div>

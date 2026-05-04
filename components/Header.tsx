@@ -11,44 +11,54 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-[#f5f1ea]/90 backdrop-blur">
       <div className="mx-auto max-w-3xl px-4 py-5 sm:px-6 sm:py-6">
-        
         {/* PC navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center justify-center gap-6 text-[12px] uppercase tracking-[0.28em] text-[#161616]/55">
             <li>
-              <Link href="/" className="hover:text-[#161616]/85 transition">
+              <Link href="/" className="transition hover:text-[#161616]/85">
                 Top
               </Link>
             </li>
+
             <li>
-              <Link href="/about" className="hover:text-[#161616]/85 transition">
+              <Link href="/about" className="transition hover:text-[#161616]/85">
                 About
               </Link>
             </li>
+
             <li>
-              <Link href="/fragments" className="hover:text-[#161616]/85 transition">
+              <Link href="/fragments" className="transition hover:text-[#161616]/85">
                 Fragments
               </Link>
             </li>
+
             <li>
-              <Link href="/human" className="hover:text-[#161616]/85 transition">
+              <Link href="/scene" className="transition hover:text-[#161616]/85">
+                Scene
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/human" className="transition hover:text-[#161616]/85">
                 Human
               </Link>
             </li>
+
             <li>
-              <Link href="/log" className="hover:text-[#161616]/85 transition">
+              <Link href="/log" className="transition hover:text-[#161616]/85">
                 Log
               </Link>
             </li>
+
             <li>
-              <Link href="/contact" className="hover:text-[#161616]/85 transition">
+              <Link href="/contact" className="transition hover:text-[#161616]/85">
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
 
-        {/* Mobile trigger（左寄せに変更） */}
+        {/* Mobile trigger */}
         <div className="flex justify-start md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -62,7 +72,6 @@ export default function Header() {
         {isOpen && (
           <nav className="mt-5 border-t border-[#161616]/10 pt-5 md:hidden">
             <ul className="flex flex-col items-start gap-4 text-[12px] uppercase tracking-[0.24em] text-[#161616]/65">
-
               <li>
                 <Link href="/" onClick={closeMenu}>
                   Top
@@ -78,6 +87,12 @@ export default function Header() {
               <li>
                 <Link href="/fragments" onClick={closeMenu}>
                   Fragments
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/scene" onClick={closeMenu}>
+                  Scene
                 </Link>
               </li>
 
@@ -98,7 +113,6 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
-
             </ul>
           </nav>
         )}
