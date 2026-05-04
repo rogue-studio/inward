@@ -11,24 +11,12 @@ export default function Home() {
               fontFamily='Georgia, "Times New Roman", serif'
               fontSize="128"
             >
-              <text x="305" y="140">
-                I
-              </text>
-              <text x="370" y="140">
-                N
-              </text>
-              <text x="490" y="140">
-                W
-              </text>
-              <text x="620" y="140">
-                A
-              </text>
-              <text x="725" y="140">
-                R
-              </text>
-              <text x="835" y="140">
-                D
-              </text>
+              <text x="305" y="140">I</text>
+              <text x="370" y="140">N</text>
+              <text x="490" y="140">W</text>
+              <text x="620" y="140">A</text>
+              <text x="725" y="140">R</text>
+              <text x="835" y="140">D</text>
             </g>
           </svg>
         </div>
@@ -42,40 +30,39 @@ export default function Home() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              {/* ===== BLOCK 1 ===== */}
               <g transform="translate(0,0)">
                 <path d="M60 120 L120 70 L180 120 L240 70 L300 120 L360 70" />
                 <path d="M30 145 L90 95 L150 145 L210 95 L270 145 L330 95 L390 145" />
                 <path d="M60 170 L120 120 L180 170 L240 120 L300 170 L360 120" />
-
                 <path d="M60 120 L120 170 L180 120 L240 170 L300 120 L360 170" />
                 <path d="M30 95 L90 145 L150 95 L210 145 L270 95 L330 145 L390 95" />
                 <path d="M60 70 L120 120 L180 70 L240 120 L300 70 L360 120" />
               </g>
 
-              {/* ===== BLOCK 2 ===== */}
               <g transform="translate(405,0)">
                 <path d="M60 120 L120 70 L180 120 L240 70 L300 120 L360 70" />
                 <path d="M30 145 L90 95 L150 145 L210 95 L270 145 L330 95 L390 145" />
                 <path d="M60 170 L120 120 L180 170 L240 120 L300 170 L360 120" />
-
                 <path d="M60 120 L120 170 L180 120 L240 170 L300 120 L360 170" />
                 <path d="M30 95 L90 145 L150 95 L210 145 L270 95 L330 145 L390 95" />
                 <path d="M60 70 L120 120 L180 70 L240 120 L300 70 L360 120" />
               </g>
 
-              {/* ===== BLOCK 3 ===== */}
               <g transform="translate(810,0)">
                 <path d="M60 120 L120 70 L180 120 L240 70 L300 120 L360 70" />
                 <path d="M30 145 L90 95 L150 145 L210 95 L270 145 L330 95 L390 145" />
                 <path d="M60 170 L120 120 L180 170 L240 120 L300 170 L360 120" />
-
                 <path d="M60 120 L120 170 L180 120 L240 170 L300 120 L360 170" />
                 <path d="M30 95 L90 145 L150 95 L210 145 L270 95 L330 145 L390 95" />
                 <path d="M60 70 L120 120 L180 70 L240 120 L300 70 L360 120" />
               </g>
             </g>
           </svg>
+        </div>
+
+        <div className="mt-16 text-center text-[13px] leading-[1.9] tracking-[0.08em] text-[#161616]/52 inward-fade">
+          <p>Not a publication.</p>
+          <p>Not a statement.</p>
         </div>
       </div>
     </main>
