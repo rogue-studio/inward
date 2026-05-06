@@ -17,8 +17,7 @@ export default function LogPage() {
       </p>
 
       <div className="text-[15px] leading-[1.9] text-[#161616]/68">
-
-        {/* LOG 1 */}
+        {/* LOG 12 */}
         <div className="pb-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">朝は来る — process</p>
           <p className="mt-4">余白の尊さを編集する深夜の詰め詰めスケジュール</p>
@@ -26,23 +25,43 @@ export default function LogPage() {
           <p>泥水みたいなコーヒー味だ</p>
         </div>
 
-        {/* LOG 2 */}
+        {/* LOG 11 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">信じること — process</p>
-          <p className="mt-4">プロジェクト立ち上げ初期のできごと</p>
-          <p>fragmentsをプリントして見てもらった</p>
-          <p>「もう少し読者を信じてもいい気がしました」と言われた</p>
+          <p className="text-[#161616]/68">SCENE — update</p>
+          <p className="mt-4">写真を5枚追加しました</p>
         </div>
 
-        {/* LOG 3 */}
+        {/* LOG 10 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">SCENE — update</p>
+          <p className="mt-4">新ページ「SCENE」を追加しました</p>
+          <p className="mt-4">7枚の写真でスタートしました</p>
+        </div>
+
+        {/* LOG 9 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">最適解 — process</p>
+          <p className="mt-4">人の感想は非常に重要な分岐になる</p>
+          <p>「もう少し読者を信じてもいい気がしました」</p>
+          <p>1ヶ月ちょっと手を動かしながら咀嚼した</p>
+          <p>プロジェクト深度を決定するに至った</p>
+        </div>
+
+        {/* LOG 8 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">ギミック — process</p>
           <p className="mt-4">比喩を排除する観察的断片</p>
           <p>読者視点で比喩になるギミック</p>
-          <p>仕掛けはまったくそれだけじゃない（自信）</p>
+          <p>仕掛けはまったくそれだけじゃない</p>
         </div>
 
-        {/* LOG 4 */}
+        {/* LOG 7 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">FRAGMENTS — update</p>
+          <p className="mt-4">断章を1本追加しました</p>
+        </div>
+
+        {/* LOG 6 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">選定 — process</p>
           <p className="mt-4">良いと良くないの間に境界線を引く</p>
@@ -51,21 +70,27 @@ export default function LogPage() {
 
         {/* LOG 5 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">破天荒メンズ — diary</p>
+          <p className="text-[#161616]/68">型破りのモーニングセット — diary</p>
           <p className="mt-4">日曜日の朝、ラーメンとパスタとざる蕎麦をシバく</p>
           <p>いずれもセブンイレブンで購入</p>
           <p>常識をぶっ飛ばして清々しい</p>
         </div>
 
-        {/* LOG 6 */}
+        {/* LOG 4 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">写真の難しさよりも — process</p>
-          <p className="mt-4">思想を共有できるカメラマン急募だな</p>
+          <p className="mt-4">思想を共有できるカメラマンさんに出会いたい</p>
           <p>写真が難しいのはさることながら</p>
           <p>視覚的に別解釈もパッケージしたい</p>
         </div>
 
-        {/* LOG 7 */}
+        {/* LOG 3 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">FRAGMENTS — update</p>
+          <p className="mt-4">断章を1本追加しました</p>
+        </div>
+
+        {/* LOG 2 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">季節の変わりめ — diary</p>
           <p className="mt-4">寒いのか暑いのかよくわからない</p>
@@ -73,6 +98,11 @@ export default function LogPage() {
           <p>今はめちゃめちゃ暑いからアイス食べてる</p>
         </div>
 
+        {/* LOG 1 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">「INWARD」公開 — launch</p>
+          <p className="mt-4">当サイト「INWARD」を公開しました</p>
+        </div>
       </div>
     </main>
   );
