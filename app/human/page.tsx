@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "HUMAN | INWARD",
-  description: "HUMAN is where inward meets the real.",
+  description: "Where INWARD meets the real.",
 };
 
 export default function HumanPage() {
@@ -13,11 +13,17 @@ export default function HumanPage() {
       </h1>
 
       <p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
-        HUMAN is where inward meets the real.
+        Where INWARD meets the real.
       </p>
 
-      <div className="text-[15px] leading-[2.1] text-[#161616]/68">
-        under consideration
+      <div className="space-y-4 text-[14px] font-light leading-[1.0] tracking-[0.05em] text-[#161616]/68">
+        <p>創造する人、場所を営む人。</p>
+
+        <p>INWARDが出会った人の声と気配を記録します。</p>
+
+        <p className="pt-6 text-[13px] tracking-[0.06em] text-[#161616]/50">
+          現在、取材記事を準備しています。
+        </p>
       </div>
     </main>
   );
