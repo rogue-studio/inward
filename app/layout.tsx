@@ -29,6 +29,31 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.inward.jp/#organization",
+      name: "Rogue Studio",
+      url: "https://www.inward.jp/",
+      email: "embers@inward.jp",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.inward.jp/#website",
+      name: "INWARD",
+      url: "https://www.inward.jp/",
+      description:
+        "An editorial project shaped by fragments, silence, and trace.",
+      inLanguage: "ja",
+      publisher: {
+        "@id": "https://www.inward.jp/#organization",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,6 +62,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="bg-[#f5f1ea] text-[#161616] antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
         <Header />
         <main className="pt-20">{children}</main>
         <Footer />
