@@ -25,25 +25,26 @@ export default function LogPage() {
 
         {/* LOG 14 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">定期メンテナンス — update</p>
+          <p className="text-[#161616]/68">うわの空 — diary</p>
           <p className="mt-4">
-            contact、about、humanを更新し、privacyを改訂しました
-          </p>
-          <p>
-            サイトの基本情報と検索エンジン向けの情報を整えました
-          </p>
-        </div>
-
-        {/* LOG 13 */}
-        <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">五月晴れ — diary</p>
-          <p className="mt-4">
-            心地よい風を受けながら、バイクで古着屋をめぐった
+            心地よい風を受けながら、バイクで古着屋をめぐる
           </p>
           <p>
             五月晴れも上機嫌で、帰りは路地裏撮影ウォークに熱中
           </p>
-          <p>バイクをどこに停めたか忘れ、焦って探した</p>
+          <p>どこにバイクを停めたか忘れて焦った</p>
+        </div>
+
+        {/* LOG 13 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">定期メンテナンス — update</p>
+          <p className="mt-4">
+            contact、about、humanページを更新しました
+          </p>
+          <p>
+            サイトの基本情報と検索エンジン向けの情報を整えました
+          </p>
+          <p>privacy policyを改訂しました</p>
         </div>
 
         {/* LOG 12 */}
