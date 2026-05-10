@@ -17,10 +17,41 @@ export default function LogPage() {
       </p>
 
       <div className="text-[15px] leading-[1.9] text-[#161616]/68">
-        {/* LOG 12 */}
+        {/* LOG 15 */}
         <div className="pb-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">SCENE — update</p>
+          <p className="mt-4">写真を1枚追加しました</p>
+        </div>
+
+        {/* LOG 14 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">定期メンテナンス — update</p>
+          <p className="mt-4">
+            contact、about、humanを更新し、privacyを改訂しました
+          </p>
+          <p>
+            サイトの基本情報と検索エンジン向けの情報を整えました
+          </p>
+        </div>
+
+        {/* LOG 13 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">五月晴れ — diary</p>
+          <p className="mt-4">
+            心地よい風を受けながら、バイクで古着屋をめぐった
+          </p>
+          <p>
+            五月晴れも上機嫌で、帰りは路地裏撮影ウォークに熱中
+          </p>
+          <p>バイクをどこに停めたか忘れ、焦って探した</p>
+        </div>
+
+        {/* LOG 12 */}
+        <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">朝は来る — process</p>
-          <p className="mt-4">余白の尊さを編集する深夜の詰め詰めスケジュール</p>
+          <p className="mt-4">
+            余白の尊さを編集する深夜の詰め詰めスケジュール
+          </p>
           <p>矛盾と皮肉にどっぷり浸かる朝5時に濃いブラック</p>
           <p>泥水みたいなコーヒー味だ</p>
         </div>
@@ -65,13 +96,19 @@ export default function LogPage() {
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">選定 — process</p>
           <p className="mt-4">良いと良くないの間に境界線を引く</p>
-          <p>境界線上あるいはその近くにあるfragmentsが総じてクリティカルだった</p>
+          <p>
+            境界線上あるいはその近くにあるfragmentsが総じてクリティカルだった
+          </p>
         </div>
 
         {/* LOG 5 */}
         <div className="py-10 border-b border-neutral-200">
-          <p className="text-[#161616]/68">型破りのモーニングセット — diary</p>
-          <p className="mt-4">日曜日の朝、ラーメンとパスタとざる蕎麦をシバく</p>
+          <p className="text-[#161616]/68">
+            型破りのモーニングセット — diary
+          </p>
+          <p className="mt-4">
+            日曜日の朝、ラーメンとパスタとざる蕎麦をシバく
+          </p>
           <p>いずれもセブンイレブンで購入</p>
           <p>常識をぶっ飛ばして清々しい</p>
         </div>
@@ -79,7 +116,9 @@ export default function LogPage() {
         {/* LOG 4 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">写真の難しさよりも — process</p>
-          <p className="mt-4">思想を共有できるカメラマンさんに出会いたい</p>
+          <p className="mt-4">
+            思想を共有できるカメラマンさんに出会いたい
+          </p>
           <p>写真が難しいのはさることながら</p>
           <p>視覚的に別解釈もパッケージしたい</p>
         </div>
