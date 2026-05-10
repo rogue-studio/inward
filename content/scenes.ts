@@ -95,4 +95,12 @@ export const scenes = [
     image: "/images/scene/scene-12.jpg",
     caption: "May, Japan",
   },
+    {
+    order: 13,
+    slug: "scene-13",
+    title: "where the sky is divided",
+    ja: "同じ空、錆の滴る壁の前で",
+    image: "/images/scene/scene-13.jpg",
+    caption: "between two nations",
+  },
 ];

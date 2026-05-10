@@ -30,7 +30,7 @@ export default async function SceneDetailPage({ params }: PageProps) {
   const next =
     currentIndex < sorted.length - 1 ? sorted[currentIndex + 1] : null;
 
-  const portraitScenes = ["scene-05", "scene-08", "scene-09"];
+  const portraitScenes = ["scene-05", "scene-08", "scene-09", "scene-13"];
   const isPortrait = portraitScenes.includes(scene.slug);
 
   return (
