@@ -103,4 +103,12 @@ export const scenes = [
     image: "/images/scene/scene-13.jpg",
     caption: "between two nations",
   },
+  　{
+　　order: 14,
+　　slug: "scene-14",
+　　title: "5:00",
+　　ja: "朝か夕か、いくつもの冬は重ねて",
+　　image: "/images/scene/scene-14.jpg",
+　　caption: "December. Where warmth meets cold.",
+},
 ];
