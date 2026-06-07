@@ -17,8 +17,25 @@ export default function LogPage() {
       </p>
 
       <div className="text-[15px] leading-[1.9] text-[#161616]/68">
-        {/* LOG 15 */}
+        {/* LOG 17 */}
         <div className="pb-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">
+            SOUNDSCAPE — under consideration
+          </p>
+           <p className="mt-4">FRAGMENTSやSCENEでは補完し切れない曖昧に。</p>
+           <p>音響風景という解釈を準備中です。</p>
+           <p>2026年6月13日、4曲入りEPを配信予定です。</p>
+           <p>詳細はLOGにてご案内いたします。</p>
+        </div>
+
+        {/* LOG 16 */}
+        <div className="py-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">SCENE — update</p>
+          <p className="mt-4">写真を1枚追加しました</p>
+        </div>
+
+        {/* LOG 15 */}
+        <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">SCENE — update</p>
           <p className="mt-4">写真を1枚追加しました</p>
         </div>
