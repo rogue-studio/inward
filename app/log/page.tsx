@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SimplePageLayout from "@/components/SimplePageLayout";
 
 export const metadata: Metadata = {
   title: "LOG | INWARD",
@@ -8,16 +9,12 @@ export const metadata: Metadata = {
 
 export default function LogPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 pb-20 pt-28 text-[#161616]">
-      <h1 className="mb-4 text-[28px] font-normal uppercase tracking-[0.14em] text-[#161616]/88">
-        LOG
-      </h1>
-
+    <SimplePageLayout title="LOG">
       <p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
         Unfinished records from inward.
       </p>
 
-      <div className="text-[15px] leading-[1.9] text-[#161616]/68">
+      <div className="text-[13px] leading-[2.1] tracking-[0.04em] text-[#161616]/62">
         {/* LOG 18 */}
         <div className="pb-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">SOUNDSCAPE — release</p>
@@ -72,12 +69,8 @@ export default function LogPage() {
         {/* LOG 13 */}
         <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">定期メンテナンス — update</p>
-          <p className="mt-4">
-            contact、about、humanページを更新しました
-          </p>
-          <p>
-            サイトの基本情報と検索エンジン向けの情報を整えました
-          </p>
+          <p className="mt-4">contact、about、humanページを更新しました</p>
+          <p>サイトの基本情報と検索エンジン向けの情報を整えました</p>
           <p>privacy policyを改訂しました</p>
         </div>
 
@@ -178,6 +171,6 @@ export default function LogPage() {
           <p className="mt-4">当サイト「INWARD」を公開しました</p>
         </div>
       </div>
-    </main>
+    </SimplePageLayout>
   );
 }

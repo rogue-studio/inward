@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import SimplePageLayout from "@/components/SimplePageLayout";
 
 export const metadata: Metadata = {
@@ -8,69 +7,70 @@ export const metadata: Metadata = {
     "INWARD is an editorial project shaped by fragments, silence, and trace. A work by Rogue Studio.",
 };
 
-const jpClass =
-  "text-[14px] leading-[1.6] tracking-[0.05em] font-light opacity-70 [text-wrap:pretty]";
-const enClass =
-  "text-[14px] leading-[1.5] tracking-[0.06em] opacity-60 [text-wrap:pretty]";
-
 export default function AboutPage() {
   return (
     <SimplePageLayout title="ABOUT">
-      <p className="mb-4 text-[13px] tracking-[0.06em] text-[#161616]/52">
+      <p className="mb-14 text-[13px] tracking-[0.06em] text-[#161616]/52">
         An editorial project shaped by fragments, silence, and trace.
       </p>
 
-      {/* 日本語 */}
-      <p className={jpClass}>断章、余白、痕跡、変化、境界。</p>
+      <div className="space-y-5 text-[13px] leading-[2.1] tracking-[0.06em] text-[#161616]/62">
+        <p>断章、余白、痕跡、変化、境界。</p>
 
-      <p className={jpClass}>言い切られない曖昧を置くプロジェクト。</p>
+        <p>言い切られない曖昧を置くプロジェクト。</p>
 
-      <p className={jpClass}>
-        だれかが触れたとき、だれかの記憶が、そっと波打つ。
-      </p>
+        <p>
+          だれかが触れたとき、
+          <br />
+          だれかの記憶が、そっと波打つ。
+        </p>
 
-      <p className={`${jpClass} mt-6`}>
-        すべては説明するためのものではない。
-      </p>
+        <p className="pt-4">
+          すべては説明するためのものではない。
+        </p>
 
-      <p className={jpClass}>
-        残るものに、ゆっくりと触れていくための場所。
-      </p>
+        <p>残るものに、ゆっくりと触れていくための場所。</p>
 
-      <p className={jpClass}>
-        それぞれは独立し、それぞれはつながっている。
-      </p>
+        <p>
+          それぞれは独立し、
+          <br />
+          それぞれはつながっている。
+        </p>
 
-      <p className={jpClass}>温度や気配は残り続ける。</p>
+        <p>温度や気配は残り続ける。</p>
 
-      <p className={`${jpClass} mt-6`}>
-        結論へ急がない。過程にとどまらない。
-      </p>
+        <p className="pt-4">
+          結論へ急がない。
+          <br />
+          過程にとどまらない。
+        </p>
 
-      <p className={jpClass}>残り火を刻み、誰かの心に灯していく。</p>
+        <p>残り火を刻み、誰かの心に灯していく。</p>
 
-      <p className={jpClass}>——</p>
+        <p className="pt-2">——</p>
 
-      <p className={jpClass}>内側へ。</p>
+        <p>内側へ。</p>
+      </div>
 
-      {/* 英語 */}
-      <p className={`${enClass} mt-12`}>INWARD is an editorial project.</p>
+      <div className="mt-14 space-y-4 text-[13px] leading-[1.9] tracking-[0.06em] text-[#161616]/45">
+        <p>INWARD is an editorial project.</p>
 
-      <p className={enClass}>shaped by fragments, silence, and trace.</p>
+        <p>Shaped by fragments, silence, and trace.</p>
 
-      <p className={enClass}>It does not seek to explain everything.</p>
+        <p>It does not seek to explain everything.</p>
 
-      <p className={enClass}>It leaves space for what remains unspoken.</p>
+        <p>It leaves space for what remains unspoken.</p>
 
-      <p className={enClass}>Each fragment stands alone,</p>
+        <p>
+          Each fragment stands alone,
+          <br />
+          yet remains quietly connected to something larger.
+        </p>
 
-      <p className={enClass}>
-        yet remains quietly connected to something larger.
-      </p>
+        <p>INWARD does not rush toward conclusions.</p>
 
-      <p className={enClass}>INWARD does not rush toward conclusions.</p>
-
-      <p className={enClass}>It stays with what remains.</p>
+        <p>It stays with what remains.</p>
+      </div>
 
       <p className="mt-14 text-[13px] tracking-[0.08em] text-[#161616]/45">
         A work by Rogue Studio.
