@@ -141,7 +141,7 @@ export default function SoundscapePage() {
 
             <div className="mt-8 space-y-5 text-[13px] leading-[2.1] tracking-[0.06em] text-[#161616]/56">
               <p>境界は、物事と物事を分ける線・区切り・接点。
-                <br/>ただし、単に「分断する線」ではなく、曖昧なものが立ち上がる場所。</p>
+                <br/>ただし、単に分断を意味するものではなく、曖昧なものが立ち上がる場所でもある。</p>
 
               <p>
                 川と海のあいだ。
@@ -156,8 +156,8 @@ export default function SoundscapePage() {
               </p>
 
               <p>
-                “Boundary” は、そうした曖昧でありながら確かに存在する場所に
-              耳を澄ませるための記録。
+                “Boundary” は、そうした曖昧でありながら確かに存在する場所に、<br />
+              耳を澄ませるための音像のひとつ。
               </p>
 
               <p>FragmentsとSCENEから派生した音響風景として。</p>
