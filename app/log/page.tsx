@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "LOG | INWARD",
@@ -17,15 +18,31 @@ export default function LogPage() {
       </p>
 
       <div className="text-[15px] leading-[1.9] text-[#161616]/68">
-        {/* LOG 17 */}
+        {/* LOG 18 */}
         <div className="pb-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">SOUNDSCAPE — release</p>
+          <p className="mt-4">
+            新ページ「
+            <Link
+              href="/soundscape"
+              className="text-[#161616]/55 underline underline-offset-4 transition hover:text-[#161616]/85"
+            >
+              SOUNDSCAPE
+            </Link>
+            」を追加しました
+          </p>
+          <p>2026.06.13、“Boundary” を配信開始しました。</p>
+        </div>
+
+        {/* LOG 17 */}
+        <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">
             SOUNDSCAPE — under consideration
           </p>
-           <p className="mt-4">FRAGMENTSやSCENEでは補完し切れない曖昧に。</p>
-           <p>音響風景という解釈を準備中です。</p>
-           <p>2026年6月13日、4曲入りEPを配信予定です。</p>
-           <p>詳細はLOGにてご案内いたします。</p>
+          <p className="mt-4">FRAGMENTSやSCENEでは補完し切れない曖昧に。</p>
+          <p>音響風景という解釈を準備中です。</p>
+          <p>2026.06.13に4曲入りEPを配信予定です。</p>
+          <p>詳細はLOGにてご案内いたします。</p>
         </div>
 
         {/* LOG 16 */}

@@ -39,6 +39,12 @@ export default function Header() {
             </li>
 
             <li>
+              <Link href="/soundscape" className="transition hover:text-[#161616]/85">
+                Soundscape
+              </Link>
+            </li>
+
+            <li>
               <Link href="/human" className="transition hover:text-[#161616]/85">
                 Human
               </Link>
@@ -93,6 +99,12 @@ export default function Header() {
               <li>
                 <Link href="/scene" onClick={closeMenu}>
                   Scene
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/soundscape" onClick={closeMenu}>
+                  Soundscape
                 </Link>
               </li>
 
