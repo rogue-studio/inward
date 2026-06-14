@@ -160,7 +160,7 @@ export default function SoundscapePage() {
               耳を澄ませるための音像のひとつ。
               </p>
 
-              <p>FragmentsとSCENEから派生した音響風景として。</p>
+              <p>FRAGMENTSとSCENEから派生した音響風景として。</p>
             </div>
           </div>
         </section>
