@@ -38,6 +38,13 @@ const storeLinks = [
   },
 ];
 
+const tracks = [
+  "inward",
+  "a day off",
+  "Between Bloom and Fall",
+  "inward x a day off (Residual Mix)",
+];
+
 export default function SoundscapePage() {
   return (
     <SimplePageLayout title="SOUNDSCAPE">
@@ -70,13 +77,13 @@ export default function SoundscapePage() {
             Latest Release
           </p>
 
-          <h2 className="text-[16px] font-light tracking-[0.08em] text-[#161616]/72">
-            “Boundary”
-          </h2>
-
-          <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-[#161616]/35">
+          <p className="mb-2 text-[11px] uppercase tracking-[0.22em] text-[#161616]/35">
             2026.06.13 1st EP release
           </p>
+
+          <h2 className="text-[22px] font-light tracking-[0.08em] text-[#161616]/72">
+            “Boundary”
+          </h2>
 
           <div className="mt-8 max-w-[400px]">
             <Image
@@ -89,51 +96,71 @@ export default function SoundscapePage() {
             />
           </div>
 
-          <div className="mt-8 space-y-5 text-[13px] leading-[2.1] tracking-[0.06em] text-[#161616]/56">
-            <p>境界は、何かを分けるためだけに存在せず。</p>
-
-            <p>
-              川と海のあいだ。
-              <br />
-              咲くことと、散ることのあいだ。
-              <br />
-              日常と非日常のあいだ。
-              <br />
-              出会いと別れのあいだ。
-              <br />
-              過ぎ去ったものと、残り続けるもののあいだ。
+          <div className="mt-8">
+            <p className="mb-4 text-[12px] uppercase tracking-[0.28em] text-[#161616]/35">
+              Track
             </p>
 
-            <p>
-              “Boundary” は、そうした曖昧でありながら確かに存在する場所に
-              耳を澄ませるための記録。
-            </p>
-
-            <p>FragmentsとSCENEから派生した音響風景として。</p>
+            <ol className="space-y-2 text-[12px] leading-[1.9] tracking-[0.08em] text-[#161616]/48">
+              {tracks.map((track, index) => (
+                <li key={track}>
+                  {String(index + 1).padStart(2, "0")} {track}
+                </li>
+              ))}
+            </ol>
           </div>
-        </section>
 
-        <section className="border-t border-[#161616]/10 pt-10">
-          <p className="mb-5 text-[12px] uppercase tracking-[0.28em] text-[#161616]/35">
-            Listen
-          </p>
+          <div className="mt-10">
+            <p className="mb-4 text-[12px] uppercase tracking-[0.28em] text-[#161616]/35">
+              Store
+            </p>
 
-          <div className="max-w-[520px] text-[13px] leading-[2.1] tracking-[0.08em] text-[#161616]/55">
-            {storeLinks.map((link, index) => (
-              <span key={link.label}>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition hover:text-[#161616]/85"
-                >
-                  {link.label}
-                </a>
-                {index < storeLinks.length - 1 && (
-                  <span className="px-2 text-[#161616]/25">/</span>
-                )}
-              </span>
-            ))}
+            <div className="max-w-[520px] text-[13px] leading-[2.1] tracking-[0.08em] text-[#161616]/55">
+              {storeLinks.map((link, index) => (
+                <span key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="transition hover:text-[#161616]/85"
+                  >
+                    {link.label}
+                  </a>
+                  {index < storeLinks.length - 1 && (
+                    <span className="px-2 text-[#161616]/25">/</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 border-t border-[#161616]/10 pt-10">
+            <h2 className="text-[22px] font-light tracking-[0.08em] text-[#161616]/72">
+              “Boundary”
+            </h2>
+
+            <div className="mt-8 space-y-5 text-[13px] leading-[2.1] tracking-[0.06em] text-[#161616]/56">
+              <p>境界は、何かを分けるためだけにあるのか。</p>
+
+              <p>
+                川と海のあいだ。
+                <br />
+                咲くことと、散ることのあいだ。
+                <br />
+                日常と非日常のあいだ。
+                <br />
+                出会いと別れのあいだ。
+                <br />
+                過ぎ去ったものと、残り続けるもののあいだ。
+              </p>
+
+              <p>
+                “Boundary” は、そうした曖昧でありながら確かに存在する場所に
+                耳を澄ませるための記録。
+              </p>
+
+              <p>FragmentsとSCENEから派生した音響風景として。</p>
+            </div>
           </div>
         </section>
       </section>
