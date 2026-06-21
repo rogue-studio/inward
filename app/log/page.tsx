@@ -15,8 +15,14 @@ export default function LogPage() {
       </p>
 
       <div className="text-[13px] leading-[2.1] tracking-[0.04em] text-[#161616]/62">
-        {/* LOG 18 */}
+        {/* LOG 19 */}
         <div className="pb-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">FRAGMENTS / SCENE — update</p>
+          <p className="mt-4">断章を1本、写真を1枚追加しました</p>
+        </div>
+
+        {/* LOG 18 */}
+        <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">SOUNDSCAPE — release</p>
           <p className="mt-4">
             新ページ「
