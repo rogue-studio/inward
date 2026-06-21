@@ -195,18 +195,33 @@ export const fragments = [
     image: "/images/fragments/sea.jpg",
   },
   {
-  order: 14,
-  slug: "spring-leaves",
-  preview: "before the rain dries",
-  ja: [
-    "古着のワークシャツ",
-    "縫い目だけ春風が抜ける",
-    "雨上がりの初夏",
-  ],
-  en: [
-    "The seam lets something pass",
-    "Spring leaves before the rain dries",
-  ],
-  image: "/images/fragments/aftertherain.jpg"
-},
+    order: 14,
+    slug: "spring-leaves",
+    preview: "before the rain dries",
+    ja: [
+      "古着のワークシャツ",
+      "縫い目だけ春風が抜ける",
+      "雨上がりの初夏",
+    ],
+    en: [
+      "The seam lets something pass",
+      "Spring leaves before the rain dries",
+    ],
+    image: "/images/fragments/aftertherain.jpg",
+  },
+  {
+    order: 15,
+    slug: "after-the-wind-fades",
+    preview: "After the wind fades",
+    ja: [
+      "遮断機の向こうで",
+      "音を立てて過ぎていく",
+      "横風が消えて、日常に戻る",
+    ],
+    en: [
+      "The train passes beyond the gate",
+      "As the side wind fades, the day goes on",
+    ],
+    image: "/images/fragments/crossing.jpg",
+  },
 ];
