@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: "/human/go-takada",
+        destination: "/human/go-takada/index.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
