@@ -957,6 +957,60 @@ section[data-page="01"] .cover .txt{
 }
 </style>
 
+
+<style id="v59-cover-no-panel">
+/* v59 — remove the cover text panel entirely */
+section[data-page="01"] .cover .txt{
+  background:transparent !important;
+  -webkit-backdrop-filter:none !important;
+  backdrop-filter:none !important;
+  box-shadow:none !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+
+section[data-page="01"] .cover .eyebrow,
+section[data-page="01"] .cover h1.cover-signature,
+section[data-page="01"] .cover .sub-name,
+section[data-page="01"] .cover .sub-ja,
+section[data-page="01"] .cover .sub-en{
+  text-shadow:0 1px 10px rgba(0,0,0,.42), 0 2px 24px rgba(0,0,0,.22) !important;
+}
+
+@media(max-width:720px){
+  section[data-page="01"] .cover .txt{
+    background:transparent !important;
+  }
+}
+</style>
+
+
+<style id="v60-cover-photo-scale">
+/* v60 — reduce cover photograph by 20% */
+section[data-page="01"] .cover figure{
+  width:80vw !important;
+  height:80svh !important;
+  left:50% !important;
+  top:50% !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:translate(-50%,-50%) !important;
+}
+
+section[data-page="01"] .cover img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+}
+
+@media(max-width:720px){
+  section[data-page="01"] .cover figure{
+    width:80vw !important;
+    height:80svh !important;
+  }
+}
+</style>
+
 </head><body><div class="story" id="story"><div class="viewer" id="humanViewer"><section data-page="01"><div class="cover"><div class="txt"><div class="eyebrow">INWARD HUMAN #01</div><h1 class="cover-signature"><span>GO</span><span>TAKADA</span></h1><div class="sub meta">
 <div class="sub-group">
 <div class="sub-name">SLOUP</div>
