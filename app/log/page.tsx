@@ -1,6 +1,4 @@
-from pathlib import Path
-
-content = r'''import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import SimplePageLayout from "@/components/SimplePageLayout";
 
@@ -197,8 +195,3 @@ export default function LogPage() {
     </SimplePageLayout>
   );
 }
-'''
-
-out = Path("/mnt/data/page.tsx")
-out.write_text(content, encoding="utf-8")
-print(out)
