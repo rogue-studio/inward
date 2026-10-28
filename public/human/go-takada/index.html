@@ -246,6 +246,78 @@ body{
   .viewer{scroll-behavior:auto}
 }
 
+
+/* v45 — iPhone / horizontal viewer hardening */
+.story{
+  position:fixed !important;
+  inset:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  overflow:hidden !important;
+  scroll-snap-type:none !important;
+}
+.viewer{
+  width:100vw !important;
+  height:100svh !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  scroll-snap-type:x mandatory !important;
+  -webkit-overflow-scrolling:touch;
+}
+.viewer > section{
+  flex:0 0 100vw !important;
+  width:100vw !important;
+  min-width:100vw !important;
+  height:100svh !important;
+  min-height:100svh !important;
+  max-height:100svh !important;
+  scroll-snap-align:start !important;
+  scroll-snap-stop:always !important;
+}
+@media(max-width:720px){
+  section[data-page="01"]{
+    padding:0 !important;
+  }
+  section[data-page="01"] .cover{
+    width:100vw !important;
+    height:100svh !important;
+    max-width:none !important;
+    overflow:hidden !important;
+  }
+  section[data-page="01"] .cover figure{
+    position:absolute !important;
+    inset:0 !important;
+    left:0 !important;
+    right:0 !important;
+    top:0 !important;
+    bottom:0 !important;
+    width:100vw !important;
+    height:100svh !important;
+    margin:0 !important;
+    transform:none !important;
+  }
+  section[data-page="01"] .cover img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+  section[data-page="01"] .cover .txt{
+    left:16px !important;
+    right:auto !important;
+    bottom:calc(18px + env(safe-area-inset-bottom)) !important;
+    top:auto !important;
+    transform:none !important;
+    width:max-content !important;
+    max-width:calc(100vw - 32px) !important;
+  }
+  .human-progress{
+    right:calc(12px + env(safe-area-inset-right)) !important;
+    bottom:calc(10px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
 </style>
 <style id="full-rules">
 .caption-page.portrait figure{width:min(720px,100%)}
@@ -660,9 +732,7 @@ SLOUP。<br/>
 SLOUPが残った。</p><div class="pause"></div>
 <p>車に乗り込み、<br/>
 窓越しに最後のひとつを投げた。</p></div></section>
-<section data-page="48"><div class="final"><div class="question">提供したいものはありますか<span class="editorial-dash" aria-hidden="true"></span></div><div class="finalvoices"><p>“ないすね”</p><p>“単に自分が用意しておきたいだけなので”</p></div></div></section></div></div><div class="num" id="num">01</div><script>
-const s=document.getElementById('story'), secs=[...s.querySelectorAll('section')], progress=document.getElementById('progress'), num=document.getElementById('num');let active=0;const set=i=>{active=i;progress.style.width=((i+1)/secs.length*100)+'%';num.textContent=secs[i].dataset.page};const io=new IntersectionObserver(es=>{const v=es.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(v)set(secs.indexOf(v.target))},{root:s,threshold:[.55,.75,.9]});secs.forEach(x=>io.observe(x));addEventListener('keydown',e=>{if(!['ArrowDown','ArrowRight','PageDown','ArrowUp','ArrowLeft','PageUp'].includes(e.key))return;e.preventDefault();const prev=['ArrowUp','ArrowLeft','PageUp'].includes(e.key);const n=Math.max(0,Math.min(secs.length-1,active+(prev?-1:1)));secs[n].scrollIntoView({behavior:'smooth',block:'start'})});
-</script>
+<section data-page="48"><div class="final"><div class="question">提供したいものはありますか<span class="editorial-dash" aria-hidden="true"></span></div><div class="finalvoices"><p>“ないすね”</p><p>“単に自分が用意しておきたいだけなので”</p></div></div></section></div></div>
 <button class="human-edge prev" id="humanPrev" type="button" aria-label="Previous page"></button>
 <button class="human-edge next" id="humanNext" type="button" aria-label="Next page"></button>
 <div class="human-progress" id="humanProgress" aria-live="polite">01 / 48</div>
@@ -734,23 +804,6 @@ const s=document.getElementById('story'), secs=[...s.querySelectorAll('section')
     goTo(current + (primary > 0 ? 1 : -1));
     window.setTimeout(() => { wheelLocked = false; }, 420);
   }, {passive:false});
-
-  viewer.addEventListener('touchstart', e => {
-    const t = e.touches[0];
-    touchStartX = t.clientX;
-    touchStartY = t.clientY;
-  }, {passive:true});
-
-  viewer.addEventListener('touchend', e => {
-    const t = e.changedTouches[0];
-    const dx = t.clientX - touchStartX;
-    const dy = t.clientY - touchStartY;
-    if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy) * 1.15) {
-      goTo(current + (dx < 0 ? 1 : -1));
-    } else {
-      inferCurrent();
-    }
-  }, {passive:true});
 
   prev?.addEventListener('click', () => goTo(current - 1));
   next?.addEventListener('click', () => goTo(current + 1));
