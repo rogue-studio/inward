@@ -26,7 +26,7 @@ export default function LogPage() {
             >
               HUMAN #01｜GO TAKADA
             </Link>
-            」を公開しました
+            」を追加しました
           </p>
         </div>
 
