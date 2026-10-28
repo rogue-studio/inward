@@ -924,6 +924,39 @@ section[data-page="32"] .lead{
 }
 </style>
 
+
+<style id="v58-navigation-cover-refinement">
+/* v58 — lower navigation arrows, clear of the photography */
+.human-edge{
+  top:auto !important;
+  bottom:58px !important;
+  transform:none !important;
+  width:42px !important;
+  min-width:42px !important;
+  height:42px !important;
+}
+
+/* slightly lighter cover panel so more of the photograph remains visible */
+section[data-page="01"] .cover .txt{
+  background:rgba(8,8,8,.58) !important;
+  -webkit-backdrop-filter:blur(1.5px) !important;
+  backdrop-filter:blur(1.5px) !important;
+}
+
+@media(max-width:720px){
+  .human-edge{
+    bottom:calc(58px + env(safe-area-inset-bottom)) !important;
+    width:40px !important;
+    min-width:40px !important;
+    height:40px !important;
+  }
+
+  section[data-page="01"] .cover .txt{
+    background:rgba(8,8,8,.62) !important;
+  }
+}
+</style>
+
 </head><body><div class="story" id="story"><div class="viewer" id="humanViewer"><section data-page="01"><div class="cover"><div class="txt"><div class="eyebrow">INWARD HUMAN #01</div><h1 class="cover-signature"><span>GO</span><span>TAKADA</span></h1><div class="sub meta">
 <div class="sub-group">
 <div class="sub-name">SLOUP</div>
