@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+from pathlib import Path
+
+content = r'''import type { Metadata } from "next";
 import Link from "next/link";
 import SimplePageLayout from "@/components/SimplePageLayout";
 
@@ -15,8 +17,23 @@ export default function LogPage() {
       </p>
 
       <div className="text-[13px] leading-[2.1] tracking-[0.04em] text-[#161616]/62">
-        {/* LOG 19 */}
+        {/* LOG 20 */}
         <div className="pb-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">HUMAN — release</p>
+          <p className="mt-4">
+            「
+            <Link
+              href="/human/go-takada"
+              className="text-[#161616]/55 underline underline-offset-4 transition hover:text-[#161616]/85"
+            >
+              HUMAN #01｜GO TAKADA
+            </Link>
+            」を公開しました
+          </p>
+        </div>
+
+        {/* LOG 19 */}
+        <div className="py-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">FRAGMENTS / SCENE — update</p>
           <p className="mt-4">断章を1本、写真を1枚追加しました</p>
         </div>
@@ -180,3 +197,8 @@ export default function LogPage() {
     </SimplePageLayout>
   );
 }
+'''
+
+out = Path("/mnt/data/page.tsx")
+out.write_text(content, encoding="utf-8")
+print(out)
