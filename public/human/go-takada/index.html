@@ -1044,7 +1044,78 @@ section[data-page="01"] .cover img{
 }
 </style>
 
-</head><body><div class="story" id="story"><div class="viewer" id="humanViewer"><section data-page="01"><div class="cover"><div class="txt"><div class="eyebrow">INWARD HUMAN #01</div><h1 class="cover-signature"><span>GO</span><span>TAKADA</span></h1><div class="sub meta">
+<style id="human-index-styles">
+.human-index-button{
+  position:fixed;
+  top:calc(6px + env(safe-area-inset-top));
+  left:calc(6px + env(safe-area-inset-left));
+  z-index:10000;
+  min-height:44px;
+  padding:14px;
+  border:0;
+  background:rgba(243,239,231,.9);
+  color:rgba(22,22,22,.65);
+  font-size:10px;
+  line-height:16px;
+  letter-spacing:.24em;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.human-index-button:focus-visible,
+.human-index-menu a:focus-visible{
+  outline:1px solid currentColor;
+  outline-offset:3px;
+}
+.human-index-menu{
+  position:fixed;
+  inset:0 auto auto 0;
+  margin:0;
+  width:min(300px,100vw);
+  max-width:100vw;
+  max-height:100svh;
+  padding:calc(64px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+  border:0;
+  background:var(--paper);
+  color:var(--ink);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.human-index-menu::backdrop{background:rgba(243,239,231,.86)}
+.human-index-menu form{margin:0}
+.human-index-menu ul{list-style:none;margin:0;padding:0}
+.human-index-menu a{
+  display:flex;
+  align-items:center;
+  min-height:44px;
+  color:rgba(22,22,22,.65);
+  font-size:12px;
+  line-height:1.5;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+@media(hover:hover){
+  .human-index-button:hover,.human-index-menu a:hover{color:var(--ink)}
+}
+</style>
+</head><body>
+<button class="human-index-button" id="humanIndexButton" type="button" aria-haspopup="dialog" aria-controls="humanIndexMenu" aria-expanded="false">INDEX</button>
+<dialog class="human-index-menu" id="humanIndexMenu" aria-label="INWARD Index">
+  <form method="dialog"><button class="human-index-button" type="submit" aria-label="Close index" autofocus>INDEX</button></form>
+  <nav aria-label="Global Navigation">
+    <ul>
+      <li><a href="/">Top</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/fragments">Fragments</a></li>
+      <li><a href="/scene">Scene</a></li>
+      <li><a href="/soundscape">Soundscape</a></li>
+      <li><a href="/human">Human</a></li>
+      <li><a href="/log">Log</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</dialog>
+<div class="story" id="story"><div class="viewer" id="humanViewer"><section data-page="01"><div class="cover"><div class="txt"><div class="eyebrow">INWARD HUMAN #01</div><h1 class="cover-signature"><span>GO</span><span>TAKADA</span></h1><div class="sub meta">
 <div class="sub-group">
 <div class="sub-name">SLOUP</div>
 <div class="sub-ja">創作スープとセレクト雑貨のダイニング</div>
@@ -1454,6 +1525,8 @@ SLOUPが残った。</p><div class="pause"></div>
   const progress = document.getElementById('humanProgress');
   const prev = document.getElementById('humanPrev');
   const next = document.getElementById('humanNext');
+  const indexButton = document.getElementById('humanIndexButton');
+  const indexMenu = document.getElementById('humanIndexMenu');
   const total = pages.length;
   let current = 0;
   let wheelLocked = false;
@@ -1490,9 +1563,30 @@ SLOUPが残った。</p><div class="pause"></div>
     viewer._humanScrollTimer = window.setTimeout(inferCurrent, 70);
   }, {passive:true});
 
+  indexButton.addEventListener('click', () => {
+    inferCurrent();
+    goTo(current, 'instant');
+    indexMenu.showModal();
+    indexMenu.scrollTop = 0;
+    indexButton.setAttribute('aria-expanded', 'true');
+  });
+
+  indexMenu.addEventListener('close', () => {
+    indexButton.setAttribute('aria-expanded', 'false');
+    indexButton.focus({preventScroll:true});
+  });
+
+  indexMenu.addEventListener('click', e => {
+    const bounds = indexMenu.getBoundingClientRect();
+    const outside = e.clientX < bounds.left || e.clientX > bounds.right ||
+      e.clientY < bounds.top || e.clientY > bounds.bottom;
+    if (e.target.closest('a') || (e.target === indexMenu && outside)) indexMenu.close();
+  });
+
   window.addEventListener('resize', () => goTo(current, 'auto'));
 
   window.addEventListener('keydown', e => {
+    if (indexMenu.open || (e.target === indexButton && e.key === ' ')) return;
     if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
       e.preventDefault();
       goTo(current + 1);
