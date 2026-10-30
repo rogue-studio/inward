@@ -1045,20 +1045,44 @@ section[data-page="01"] .cover img{
 </style>
 
 <style id="human-index-styles">
-.human-index-button{
+.human-index-bar,
+.human-index-menu{
   position:fixed;
-  top:calc(6px + env(safe-area-inset-top));
-  left:calc(6px + env(safe-area-inset-left));
-  z-index:10000;
-  min-height:44px;
-  padding:14px;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(245,241,234,.9);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+  font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.5;
+}
+.human-index-bar{z-index:10000}
+.human-index-bar:has([aria-expanded="true"]){visibility:hidden}
+.human-index-inner{
+  max-width:768px;
+  margin:0 auto;
+  padding:calc(20px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+}
+.human-index-bar .human-index-inner,
+.human-index-menu form{display:flex}
+.human-index-button{
+  padding:0;
   border:0;
-  background:rgba(243,239,231,.9);
-  color:rgba(22,22,22,.65);
-  font-size:10px;
-  line-height:16px;
-  letter-spacing:.24em;
+  background:transparent;
+  color:rgba(22,22,22,.55);
+  font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:.28em;
+  text-transform:uppercase;
   cursor:pointer;
+  transition:color .5s;
   -webkit-tap-highlight-color:transparent;
 }
 .human-index-button:focus-visible,
@@ -1067,40 +1091,49 @@ section[data-page="01"] .cover img{
   outline-offset:3px;
 }
 .human-index-menu{
-  position:fixed;
   inset:0 auto auto 0;
   margin:0;
-  width:min(300px,100vw);
-  max-width:100vw;
+  max-width:100%;
   max-height:100svh;
-  padding:calc(64px + env(safe-area-inset-top)) calc(20px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(20px + env(safe-area-inset-left));
+  padding:0;
   border:0;
-  background:var(--paper);
   color:var(--ink);
   overflow-y:auto;
   overscroll-behavior:contain;
 }
-.human-index-menu::backdrop{background:rgba(243,239,231,.86)}
+.human-index-menu::backdrop{background:transparent}
 .human-index-menu form{margin:0}
-.human-index-menu ul{list-style:none;margin:0;padding:0}
-.human-index-menu a{
+.human-index-menu nav{
+  margin-top:20px;
+  border-top:1px solid rgba(22,22,22,.1);
+  padding-top:20px;
+}
+.human-index-menu ul{
   display:flex;
-  align-items:center;
-  min-height:44px;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+  list-style:none;
+  margin:0;
+  padding:0;
   color:rgba(22,22,22,.65);
   font-size:12px;
   line-height:1.5;
   letter-spacing:.24em;
   text-transform:uppercase;
-  text-decoration:none;
+}
+.human-index-menu a{color:inherit;text-decoration:none}
+@media(min-width:640px){
+  .human-index-inner{padding:calc(24px + env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left))}
 }
 @media(hover:hover){
-  .human-index-button:hover,.human-index-menu a:hover{color:var(--ink)}
+  .human-index-button:hover{color:rgba(22,22,22,.85)}
 }
 </style>
 </head><body>
-<button class="human-index-button" id="humanIndexButton" type="button" aria-haspopup="dialog" aria-controls="humanIndexMenu" aria-expanded="false">INDEX</button>
+<div class="human-index-bar"><div class="human-index-inner"><button class="human-index-button" id="humanIndexButton" type="button" aria-haspopup="dialog" aria-controls="humanIndexMenu" aria-expanded="false">INDEX</button></div></div>
 <dialog class="human-index-menu" id="humanIndexMenu" aria-label="INWARD Index">
+  <div class="human-index-inner">
   <form method="dialog"><button class="human-index-button" type="submit" aria-label="Close index" autofocus>INDEX</button></form>
   <nav aria-label="Global Navigation">
     <ul>
@@ -1114,6 +1147,7 @@ section[data-page="01"] .cover img{
       <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
+  </div>
 </dialog>
 <div class="story" id="story"><div class="viewer" id="humanViewer"><section data-page="01"><div class="cover"><div class="txt"><div class="eyebrow">INWARD HUMAN #01</div><h1 class="cover-signature"><span>GO</span><span>TAKADA</span></h1><div class="sub meta">
 <div class="sub-group">
