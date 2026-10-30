@@ -1062,6 +1062,23 @@ section[data-page="01"] .cover img{
   line-height:1.5;
 }
 .human-index-bar{z-index:10000}
+.human-desktop-nav{display:none;width:100%}
+.human-desktop-nav ul{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  color:rgba(22,22,22,.55);
+  font-size:12px;
+  line-height:1.5;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+.human-desktop-nav a{color:inherit;text-decoration:none;transition:color .15s}
+
 .human-index-bar:has([aria-expanded="true"]){visibility:hidden}
 .human-index-inner{
   max-width:768px;
@@ -1126,12 +1143,29 @@ section[data-page="01"] .cover img{
 @media(min-width:640px){
   .human-index-inner{padding:calc(24px + env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left))}
 }
+@media(min-width:768px){
+  .human-desktop-nav{display:block}
+  .human-index-bar .human-index-button{display:none}
+}
 @media(hover:hover){
-  .human-index-button:hover{color:rgba(22,22,22,.85)}
+  .human-index-button:hover,.human-desktop-nav a:hover{color:rgba(22,22,22,.85)}
 }
 </style>
 </head><body>
-<div class="human-index-bar"><div class="human-index-inner"><button class="human-index-button" id="humanIndexButton" type="button" aria-haspopup="dialog" aria-controls="humanIndexMenu" aria-expanded="false">INDEX</button></div></div>
+<div class="human-index-bar"><div class="human-index-inner">
+<nav class="human-desktop-nav" id="humanDesktopNav" aria-label="Global Navigation">
+  <ul>
+    <li><a href="/">Top</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/fragments">Fragments</a></li>
+    <li><a href="/scene">Scene</a></li>
+    <li><a href="/soundscape">Soundscape</a></li>
+    <li><a href="/human">Human</a></li>
+    <li><a href="/log">Log</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+<button class="human-index-button" id="humanIndexButton" type="button" aria-haspopup="dialog" aria-controls="humanIndexMenu" aria-expanded="false">INDEX</button></div></div>
 <dialog class="human-index-menu" id="humanIndexMenu" aria-label="INWARD Index">
   <div class="human-index-inner">
   <form method="dialog"><button class="human-index-button" type="submit" aria-label="Close index" autofocus>INDEX</button></form>
@@ -1561,6 +1595,8 @@ SLOUPが残った。</p><div class="pause"></div>
   const next = document.getElementById('humanNext');
   const indexButton = document.getElementById('humanIndexButton');
   const indexMenu = document.getElementById('humanIndexMenu');
+  const desktopNav = document.getElementById('humanDesktopNav');
+  const desktopMedia = window.matchMedia('(min-width:768px)');
   const total = pages.length;
   let current = 0;
   let wheelLocked = false;
@@ -1598,6 +1634,7 @@ SLOUPが残った。</p><div class="pause"></div>
   }, {passive:true});
 
   indexButton.addEventListener('click', () => {
+    if (desktopMedia.matches) return;
     inferCurrent();
     goTo(current, 'instant');
     indexMenu.showModal();
@@ -1607,7 +1644,8 @@ SLOUPが残った。</p><div class="pause"></div>
 
   indexMenu.addEventListener('close', () => {
     indexButton.setAttribute('aria-expanded', 'false');
-    indexButton.focus({preventScroll:true});
+    const focusTarget = desktopMedia.matches ? desktopNav.querySelector('a') : indexButton;
+    focusTarget.focus({preventScroll:true});
   });
 
   indexMenu.addEventListener('click', e => {
@@ -1617,10 +1655,14 @@ SLOUPが残った。</p><div class="pause"></div>
     if (e.target.closest('a') || (e.target === indexMenu && outside)) indexMenu.close();
   });
 
+  desktopMedia.addEventListener('change', () => {
+    if (desktopMedia.matches && indexMenu.open) indexMenu.close();
+  });
+
   window.addEventListener('resize', () => goTo(current, 'auto'));
 
   window.addEventListener('keydown', e => {
-    if (indexMenu.open || (e.target === indexButton && e.key === ' ')) return;
+    if (indexMenu.open || (e.key === ' ' && (e.target === indexButton || e.target.closest?.('#humanDesktopNav')))) return;
     if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
       e.preventDefault();
       goTo(current + 1);
