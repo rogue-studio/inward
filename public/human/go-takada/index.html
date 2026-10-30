@@ -1107,6 +1107,7 @@ section[data-page="01"] .cover img{
   outline:1px solid currentColor;
   outline-offset:3px;
 }
+.human-index-button.is-pointer-focus:focus{outline:none}
 .human-index-menu{
   inset:0 auto auto 0;
   margin:0;
@@ -1597,6 +1598,14 @@ SLOUPが残った。</p><div class="pause"></div>
   const indexMenu = document.getElementById('humanIndexMenu');
   const desktopNav = document.getElementById('humanDesktopNav');
   const desktopMedia = window.matchMedia('(min-width:768px)');
+  const indexButtons = [indexButton, indexMenu.querySelector('button')];
+
+  document.addEventListener('pointerdown', () => {
+    indexButtons.forEach(button => button.classList.add('is-pointer-focus'));
+  }, {capture:true, passive:true});
+  document.addEventListener('keydown', () => {
+    indexButtons.forEach(button => button.classList.remove('is-pointer-focus'));
+  }, {capture:true});
   const total = pages.length;
   let current = 0;
   let wheelLocked = false;
