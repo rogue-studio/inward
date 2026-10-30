@@ -224,4 +224,19 @@ export const fragments = [
     ],
     image: "/images/fragments/crossing.jpg",
   },
+  {
+    order: 16,
+    slug: "evening-arrives-first",
+    preview: "Evening arrives first",
+    ja: [
+      "いつもと同じ時刻に",
+      "同じバス停で降りる",
+      "空はもう先に暮れている",
+    ],
+    en: [
+      "Nothing is different",
+      "But the day no longer waits",
+    ],
+    image: "/images/fragments/evening.jpg",
+  },
 ];
