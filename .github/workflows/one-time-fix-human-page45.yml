@@ -1,0 +1,58 @@
+name: One-time HUMAN page 45 mobile text fix
+on:
+  push:
+    branches:
+      - fix-human-go-takada-page45-iphone-20261101
+    paths:
+      - .github/workflows/one-time-fix-human-page45.yml
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply the approved line break and mobile clearance (page 45 only)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("public/human/go-takada/index.html")
+          s = p.read_text(encoding="utf-8")
+          old = "店名の話になった。<br/>\nSLOUP。<br/>\n段差をつなぐ、スロープ。"
+          new = "店名の話になった。SLOUP。<br/>\n段差をつなぐ、スロープ。"
+          css = """<style id="page45-mobile-fit">
+          /* Scoped to HUMAN page 45. Keep the copy clear of the fixed menu. */
+          @media(max-width:720px){
+            section[data-page="45"]{
+              padding-top:max(72px,calc(62px + env(safe-area-inset-top)));
+              padding-bottom:34px;
+            }
+          }
+          @media(max-width:720px) and (max-height:720px){
+            section[data-page="45"] .bodycopy.dense{line-height:1.27}
+            section[data-page="45"] .pause{height:6px}
+          }
+          @media(max-width:720px) and (max-height:600px){
+            section[data-page="45"] .bodycopy.dense{font-size:11px;line-height:1.26;letter-spacing:.025em}
+            section[data-page="45"] .pause{height:4px}
+          }
+          </style>
+          """
+          assert s.count(old) == 1, "Expected original copy not found exactly once"
+          assert s.count('data-page="45"') == 1, "Expected exactly one page 45"
+          assert 'id="page45-mobile-fit"' not in s
+          assert s.count("</head>") == 1
+          t = s.replace(old, new, 1).replace("</head>", css + "</head>", 1)
+          assert t.count("<section data-page=") == s.count("<section data-page=") == 48
+          p.write_text(t, encoding="utf-8")
+          PY
+      - name: Commit only the corrected HTML, then remove this one-time workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/human/go-takada/index.html
+          git rm .github/workflows/one-time-fix-human-page45.yml
+          git commit -m "Fix HUMAN page 45 text wrap and iPhone menu overlap"
+          git push origin HEAD:fix-human-go-takada-page45-iphone-20261101
