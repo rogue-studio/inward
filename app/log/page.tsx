@@ -15,6 +15,12 @@ export default function LogPage() {
       </p>
 
       <div className="text-[13px] leading-[2.1] tracking-[0.04em] text-[#161616]/62">
+        {/* LOG 21 */}
+        <div className="pb-10 border-b border-neutral-200">
+          <p className="text-[#161616]/68">FRAGMENTS / SCENE — update</p>
+          <p className="mt-4">断章を1本、写真を5枚追加しました</p>
+        </div>
+
         {/* LOG 20 */}
         <div className="pb-10 border-b border-neutral-200">
           <p className="text-[#161616]/68">HUMAN — release</p>
